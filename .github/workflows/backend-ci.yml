@@ -30,7 +30,7 @@ jobs:
         run: pip install pipenv
 
       - name: Install dependencies
-        run: pipenv install
+        run: pipenv install --dev
 
       - name: Run lint
         run: pipenv run lint
@@ -55,7 +55,7 @@ jobs:
         run: pip install pipenv
 
       - name: Install dependencies
-        run: pipenv install
+        run: pipenv install --dev
 
       - name: Run tests
         run: pipenv run test
@@ -72,4 +72,4 @@ jobs:
 
       - name: Build backend Docker image
         working-directory: starter/backend
-        run: docker build --tag mp-backend:ci .
+        run: docker build --tag mp-backend:ci .ss
